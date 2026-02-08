@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Valentine ❤️</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 40px 30px;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      animation: fadeIn 1.2s ease;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+    .heart {
+      font-size: 3rem;
+      animation: beat 1.5s infinite;
+      margin: 15px 0;
+    }
+    button {
+      background: white;
+      color: #ff4d6d;
+      border: none;
+      padding: 12px 22px;
+      font-size: 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .hidden {
+      display: none;
+    }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Valentine’s Day 💕</h1>
+    <div class="heart">❤️</div>
+    <p id="message">
+      I just wanted to remind you how special you are to me.
+      Every day with you feels warmer, brighter, and better.
+    </p>
+    <button onclick="revealMessage()">Click for a surprise</button>
+    <p id="surprise" class="hidden">
+      I love you more than words can say,
+      and I’m so grateful that you’re mine.
+      Forever my favorite person. 💖
+    </p>
+  </div>
+
+  <script>
+    function revealMessage() {
+      document.getElementById('surprise').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
